@@ -15,6 +15,12 @@ lvim.colorscheme = "tokyonight"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { command = "black", filetypes = { "python" } },
+  { command = "isort", filetypes = { "python" } },
+}
+
 require("transparent").setup({
   enable = true,
 })
@@ -76,5 +82,12 @@ require("sidebar-nvim").setup({
       "target",
       ".git"
     }
+  }
+})
+
+require("code_runner").setup({
+  filetype = {
+    python = "python3 scripts",
+    rust = "cargo build"
   }
 })

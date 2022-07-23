@@ -77,6 +77,7 @@ local defaults = {
     -- Own
     ["<C-o>"] = ":NvimTreeToggle<CR>",
     ["<C-s>"] = ":SidebarNvimToggle<CR>",
+    ["<f5>"] = ":RunProject<CR>"
   },
 
   term_mode = {

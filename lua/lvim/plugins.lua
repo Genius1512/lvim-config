@@ -241,6 +241,8 @@ local core_plugins = {
   { 'xiyaowong/nvim-transparent' },
 
   { "sidebar-nvim/sidebar.nvim" },
+
+  { "CRAG666/code_runner.nvim", requires = "nvim-lua/plenary.nvim" }
 }
 
 local default_snapshot_path = join_paths(get_lvim_base_dir(), "snapshots", "default.json")
